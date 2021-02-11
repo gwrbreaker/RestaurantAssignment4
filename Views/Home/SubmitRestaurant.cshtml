@@ -1,0 +1,46 @@
+﻿@{ ViewData["Title"] = "Enter a New Restaurant"; }
+<h1 class="text-center">@ViewData["Title"]</h1>
+<!--I added some bootstrap to the following text as well as adding and cropping a picture-->
+<p class="alert-dark">Tell us what you like!</p>
+<img width="500" height="300" src="~/img/restaurant.jpg"  >
+<br />
+@model RestaurantAssignment4.Models.Restaurants
+<br />
+<form asp-action="SubmitRestaurant" method="post">
+    <div>
+        <label asp-for="getName">Name: </label>
+        <input asp-for="getName" />
+    </div>
+
+
+    <div>
+        <label asp-for="RestaurantName">Restaurant Name: </label>
+        <input asp-for="RestaurantName" />
+    </div>
+
+    <div>
+        <label asp-for="FavoriteDish">Favorite Dish: </label>
+        <input asp-for="FavoriteDish" />
+    </div>
+
+    <div>
+        <label asp-for="Address">Address: </label>
+        <input asp-for="Address" />
+    </div>
+
+    <div>
+        <label asp-for="Phone">Restaurant Phone Number: </label>
+        <input asp-for="Phone" />
+        
+    </div>
+
+    <div>
+        <label asp-for="Website">Website: </label>
+        <input asp-for="Website" />
+    </div>
+
+    <!--As a homage to professor Hilton, I did the danger button class-->
+    <button type="submit" class="btn btn-danger" >Submit your Restaurant</button>
+</form>
+<div asp-validation-summary="All"></div>
+

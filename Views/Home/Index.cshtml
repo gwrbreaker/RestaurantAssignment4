@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Best Provo Restaurants";
+}
+
+@model IEnumerable<string>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+
+</head>
+
+<body background-color="fffff">
+    <div class="text-center">
+        <h1 font="impact" color="pink">Best Provo Restaurants</h1>
+    </div>
+    <br />
+    <div class="text-center">
+        <img src="~/img/bombayhouse.jfif">
+    </div>
+    
+    <ul>
+        @foreach (string i in Model)
+        {
+
+            <li color="purple" font="helvetical">@i</li>
+            
+            }
+        </ul>
+    <br />
+    <div color="purple" class="text-center">
+        <h1 color="purple">If anyone tells you there are no good eats in Provo, they just haven't been around!</h1></div>
+</body>
+</html>
+
+

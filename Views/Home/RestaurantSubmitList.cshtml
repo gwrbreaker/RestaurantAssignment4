@@ -1,0 +1,29 @@
+﻿@{ ViewData["Title"] = "Restaurant List"; }
+
+@model IEnumerable<RestaurantAssignment4.Models.Restaurants>
+
+<div>
+    <h2>Here are the restaurants you have entered so far</h2>
+
+    <table>
+        <thead>
+            <tr><th>Name</th><th>Restaurant Name</th><th>Favorite Dish</th><th>Restaurant Phone #</th><th>Website</th></tr>
+        </thead>
+        <!--This goes through the enumeration to get all the inputed values-->
+        <tbody>
+            @foreach (RestaurantAssignment4.Models.Restaurants r in Model)
+            {
+<tr>
+    <td>@r.getName</td>
+    <td>@r.RestaurantName</td>
+    <td>@r.FavoriteDish</td>
+    <td>@r.Phone</td>
+    <td>@r.Website</td>
+
+</tr>
+       }
+        </tbody>
+    </table>
+    <br />
+    <img width="300" height="300" src="~/img/food.jpg" >
+</div>
